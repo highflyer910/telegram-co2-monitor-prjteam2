@@ -38,3 +38,15 @@
   - Frontend (UI)
 - **Punti Deboli:**
   - databases
+
+# Davide
+
+- **Linguaggi e Tecnologie:**
+  - C# 
+  - Typescript
+  - .Net 
+  - React
+
+- **Preferenze:**
+
+- **Punti Deboli:**
