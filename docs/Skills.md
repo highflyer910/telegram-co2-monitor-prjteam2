@@ -25,3 +25,16 @@
   - Backend in particolare la strutturazione di API
 - **Punti Deboli:**
   - Poca affinità alle query SQL
+
+  ## Thea
+
+- **Linguaggi e Tecnologie:**
+  - Javascript
+  - Vue
+  - React
+  - Tailwind
+  - GSAP
+- **Preferenze:**
+  - Frontend (UI)
+- **Punti Deboli:**
+  - databases

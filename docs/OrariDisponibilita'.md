@@ -10,3 +10,8 @@
 ## Andrei
 
 - Il pomeriggio dalle 14 alle 20
+
+## Thea
+
+- Dalle 15:00 alle 19:00
+- Il sabato
