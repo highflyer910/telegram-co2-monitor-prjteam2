@@ -27,7 +27,7 @@
 
   - Poca affinità alle query SQL
 
-  ## Thea
+## Thea
 
 - **Linguaggi e Tecnologie:**
   - Javascript
@@ -40,7 +40,7 @@
 - **Punti Deboli:**
   - databases
 
-# Davide
+## Davide
 
 - **Linguaggi e Tecnologie:**
 
@@ -64,9 +64,9 @@
   - Frontend (UI)
 - **Punti Deboli:**
   - BE
-  - # databases
+  - databases
 
-# Davide
+## Davide
 
 - **Linguaggi e Tecnologie:**
 
@@ -74,7 +74,3 @@
   - Typescript
   - .Net
   - React
-
-- **Preferenze:**
-
-- \*_Punti Deboli:_
