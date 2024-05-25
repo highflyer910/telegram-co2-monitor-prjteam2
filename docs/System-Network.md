@@ -8,3 +8,7 @@
 ## Andrei
 
 - Windows 11
+
+## Thea
+
+- Windows 10
