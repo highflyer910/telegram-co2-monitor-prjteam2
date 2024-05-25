@@ -24,6 +24,7 @@
   - Frontend, in particolare le logiche e la gestione degli eventi
   - Backend in particolare la strutturazione di API
 - **Punti Deboli:**
+
   - Poca affinità alle query SQL
 
   ## Thea
@@ -42,11 +43,38 @@
 # Davide
 
 - **Linguaggi e Tecnologie:**
-  - C# 
+
+  - C#
   - Typescript
-  - .Net 
+  - .Net
   - React
 
 - **Preferenze:**
 
 - **Punti Deboli:**
+
+## Giorgio
+
+- **Linguaggi e Tecnologie:**
+  - MERN
+  - Bootstrap
+  - Tailwind
+  - GSAP
+- **Preferenze:**
+  - Frontend (UI)
+- **Punti Deboli:**
+  - BE
+  - # databases
+
+# Davide
+
+- **Linguaggi e Tecnologie:**
+
+  - C#
+  - Typescript
+  - .Net
+  - React
+
+- **Preferenze:**
+
+- \*_Punti Deboli:_
