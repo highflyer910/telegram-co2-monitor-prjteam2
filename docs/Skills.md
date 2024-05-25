@@ -66,9 +66,7 @@
   - BE
   - databases
 
-## Davide
 
-- **Linguaggi e Tecnologie:**
 
   - C#
   - Typescript
