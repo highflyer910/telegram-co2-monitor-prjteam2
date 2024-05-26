@@ -12,3 +12,7 @@
 ## Thea
 
 - Windows 10
+
+## Giorgio
+
+- Linux Ubuntu LTS
