@@ -65,3 +65,17 @@
 - **Punti Deboli:**
   - BE
   - databases
+
+
+## Constantin
+
+- **Linguaggi e Tecnologie:**
+  - JavaScript
+  - Conoscenza basilare di C++(da Ripassare)
+  - Bootstrap
+  - React
+- **Preferenze:**
+  - Back-End(se possibile)
+  - Front-End
+- **Punti Deboli:**
+- Sono nuovo nel mondo della programmazione quindi credo che faro spesso tante domande.
