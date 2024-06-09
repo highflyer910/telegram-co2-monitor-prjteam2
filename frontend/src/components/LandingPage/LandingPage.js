@@ -1,20 +1,18 @@
-// src/components/LandingPage/LandingPage.js
-
 import React from 'react';
 import TelegramLoginButton from './TelegramLoginButton';
 
 const LandingPage = () => {
   return (
     <div className="relative bg-gray-100 min-h-screen">
-      {/* SVG background */}
       <img
         src={`${process.env.PUBLIC_URL}/background.svg`}
-        alt="Background"
+        alt=""
         className="absolute inset-0 w-full h-full object-cover z-0"
+        aria-hidden="true" 
       />
 
       {/* Header */}
-      <header className="relative w-full z-10">
+      <header className="relative w-full z-10" role="banner">
         <div className="w-full h-82 md:h-60">
           <img
             src={`${process.env.PUBLIC_URL}/header.svg`}
@@ -29,14 +27,14 @@ const LandingPage = () => {
       </header>
 
       {/* Main content */}
-      <div className="relative flex flex-col items-center justify-center py-16 md:pt-12 z-10">
+      <main className="relative flex flex-col items-center justify-center py-16 md:pt-12 z-10" role="main">
         <p className="font-body text-2xl text-shadow text-bold text-green-950 mb-3 text-center">
           Start making a difference today!
         </p>
 
         {/* Login with Telegram button */}
         <TelegramLoginButton />
-      </div>
+      </main>
     </div>
   );
 };
