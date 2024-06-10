@@ -2,7 +2,9 @@ import React from 'react';
 
 const EstimatedEmissions = () => {
   return (
+
     <div className="relative bg-gray-100 min-h-screen overflow-auto flex flex-col">
+=
       <img
         src={`${process.env.PUBLIC_URL}/background.svg`}
         alt="Background"
@@ -24,7 +26,9 @@ const EstimatedEmissions = () => {
         </h1>
       </header>
 
+
       <main className="relative flex flex-col items-center pt-16 md:pt-10 z-10 flex-grow">
+
         <div className="relative font-body text-3xl bg-yellow-300 font-bold text-green-800 mb-4 mt-0 sm:w-full text-center border-2 border-green-800 py-3 px-4 w-full max-w-xs">
           <img src={`${process.env.PUBLIC_URL}/icon.png`} alt="" className="absolute left-2 w-10 h-10" aria-hidden="true" />
           1 Month
@@ -42,6 +46,7 @@ const EstimatedEmissions = () => {
             </button>
           </div>
         </section>
+
       </main>
 
       <div className="flex-grow"></div>
@@ -49,8 +54,11 @@ const EstimatedEmissions = () => {
       <button className="bg-green-700 font-body z-10 text-yellow-200 w-full max-w-xs py-3 px-8 rounded shadow-md hover:bg-green-800 mb-8 self-center" aria-label="GoGreen">
         GoGreen
       </button>
+
     </div>
   );
 };
 
+
 export default EstimatedEmissions;
+
