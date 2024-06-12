@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('telegram_user');
+    console.log('Stored user:', storedUser); // Add this line to check if user data is retrieved
+    if (!storedUser) {
+      navigate('/');
+    } else {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        console.log('Parsed user:', parsedUser); // Add this line to check if user data is parsed correctly
+        setUser(parsedUser);
+      } catch (error) {
+        console.error('Failed to parse user data:', error);
+        navigate('/');
+      }
+    }
+  }, [navigate]);
+
+  if (!user) {
+    return <p>Loading...</p>; // Optionally, show a loading message while checking authentication
+  }
+
   const handle1MonthButtonClick = () => {
     navigate('/estimatedemissions');
   };
@@ -34,62 +57,53 @@ const Dashboard = () => {
           Track your emissions related to your Telegram services usage
         </p>
         <div className="flex flex-col items-center space-y-3 w-full px-4 mb-8">
-
           <button
             className="relative w-full max-w-xs bg-yellow-400 text-green-800 font-body py-2 px-4 rounded border-2 border-green-800 shadow-md hover:bg-yellow-500 flex items-center justify-center"
             onClick={handle1MonthButtonClick}
             aria-label="Track emissions for 1 month"
           >
-
             <img
               src={`${process.env.PUBLIC_URL}/icon.png`}
               alt=""
               className="absolute left-2 w-6 h-6"
               aria-hidden="true"
             />
-
             1 Month
           </button>
           <button
             className="relative w-full max-w-xs bg-yellow-400 text-green-800 font-body py-2 px-4 rounded border-2 border-green-800 shadow-md hover:bg-yellow-500 flex items-center justify-center"
             aria-label="Track emissions for 3 months"
           >
-
             <img
               src={`${process.env.PUBLIC_URL}/icon.png`}
               alt=""
               className="absolute left-2 w-6 h-6"
               aria-hidden="true"
             />
-
             3 Months
           </button>
           <button
             className="relative w-full max-w-xs bg-yellow-400 text-green-800 font-body py-2 px-4 rounded border-2 border-green-800 shadow-md hover:bg-yellow-500 flex items-center justify-center"
             aria-label="Track emissions for 6 months"
           >
-
             <img
               src={`${process.env.PUBLIC_URL}/icon.png`}
               alt=""
               className="absolute left-2 w-6 h-6"
               aria-hidden="true"
             />
-
             6 Months
           </button>
           <button
             className="relative w-full max-w-xs bg-yellow-400 text-green-800 font-body py-2 px-4 rounded border-2 border-green-800 shadow-md hover:bg-yellow-500 flex items-center justify-center"
             aria-label="Track emissions for 1 year"
           >
-
             <img
               src={`${process.env.PUBLIC_URL}/icon.png`}
               alt=""
               className="absolute left-2 w-6 h-6"
               aria-hidden="true"
             />
-
             1 Year
           </button>
         </div>
@@ -98,6 +112,4 @@ const Dashboard = () => {
   );
 };
 
-
 export default Dashboard;
-
