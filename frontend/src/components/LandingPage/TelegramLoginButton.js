@@ -26,7 +26,6 @@ const TelegramLoginButton = () => {
 
   return (
     <div id="telegram-login-button-container">
-      {/* Telegram Login Button will be injected here */}
     </div>
   );
 };

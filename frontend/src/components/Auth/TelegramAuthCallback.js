@@ -1,5 +1,3 @@
-// TelegramAuthCallback.js
-
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,20 +5,29 @@ const TelegramAuthCallback = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Handle authentication callback from Telegram
     const queryParams = new URLSearchParams(window.location.search);
-    const userId = queryParams.get('id'); // Example: Retrieve user ID from query parameters
+    const user = {
+      id: queryParams.get('id'),
+      firstName: queryParams.get('first_name'),
+      username: queryParams.get('username'),
+      photo_url: queryParams.get('photo_url'),
+      authDate: queryParams.get('auth_date'),
+      hash: queryParams.get('hash'),
+    };
 
-    // Perform any authentication-related actions here, such as storing user information in localStorage, etc.
-    console.log('User ID:', userId);
+    console.log('User data received:', user);
 
-    // Redirect to the desired page after authentication (e.g., Dashboard)
-    navigate('/dashboard');
+    if (user.id) {
+      localStorage.setItem('telegram_user', JSON.stringify(user));
+      navigate('/dashboard');
+    } else {
+      console.error('User data is missing or invalid');
+    }
   }, [navigate]);
 
   return (
     <div>
-      <p>Handling Telegram authentication callback...</p>
+      <p>Loading...</p>
     </div>
   );
 };

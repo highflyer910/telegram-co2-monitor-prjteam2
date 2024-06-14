@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
+
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -7,13 +9,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     const storedUser = localStorage.getItem('telegram_user');
-    console.log('Stored user:', storedUser); // Add this line to check if user data is retrieved
+    console.log('Stored user:', storedUser); 
     if (!storedUser) {
       navigate('/');
     } else {
       try {
         const parsedUser = JSON.parse(storedUser);
-        console.log('Parsed user:', parsedUser); // Add this line to check if user data is parsed correctly
+        console.log('Parsed user:', parsedUser); 
         setUser(parsedUser);
       } catch (error) {
         console.error('Failed to parse user data:', error);
@@ -23,7 +25,7 @@ const Dashboard = () => {
   }, [navigate]);
 
   if (!user) {
-    return <p>Loading...</p>; // Optionally, show a loading message while checking authentication
+    return <p>Loading...</p>; 
   }
 
   const handle1MonthButtonClick = () => {
@@ -38,22 +40,15 @@ const Dashboard = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
         aria-hidden="true"
       />
-      <header className="relative w-full z-10">
-        <div className="w-full h-82 md:h-60">
-          <img
-            src={`${process.env.PUBLIC_URL}/header.svg`}
-            alt="GoGreen Logo"
-            className="w-full h-full object-cover"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          />
-        </div>
+
+      <Header />
+
+      <main className="relative flex flex-col items-center justify-center md:pt-0 pt-0">
         <h1 className="font-poppins text-3xl font-bold text-center bg-yellow-400 text-green-800 py-3 px-4 shadow-lg">
           Emissions Impact Dashboard
         </h1>
-      </header>
-
-      <main className="relative flex flex-col items-center justify-center pt-4 md:pt-6 z-10">
-        <p className="font-body text-2xl text-shadow text-bold text-green-950 mb-6 text-center">
+        
+        <p className="font-body text-xl text-shadow text-bold text-green-900 mb-6 mt-4 text-center">
           Track your emissions related to your Telegram services usage
         </p>
         <div className="flex flex-col items-center space-y-3 w-full px-4 mb-8">
