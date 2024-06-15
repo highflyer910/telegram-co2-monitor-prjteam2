@@ -15,7 +15,7 @@ const TelegramLoginButton = () => {
     const script = document.createElement('script');
     script.src = 'https://telegram.org/js/telegram-widget.js?7';
     script.async = true;
-    script.setAttribute('data-telegram-login', 'co2usage_bot');
+    script.setAttribute('data-telegram-login','co2usage_bot');
     script.setAttribute('data-size', 'large');
     script.setAttribute('data-auth-url', 'https://gogreenapp.vercel.app/auth/telegram/callback'); // Replace with your auth URL
     script.setAttribute('data-request-access', 'write');

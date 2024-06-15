@@ -47,7 +47,7 @@ const Donate = () => {
 
   const handleDonate = () => {
     const projectId = 'mgnus-lucus-it';
-    const callbackUrl = 'https://8617-2a0b-6204-1911-3900-d527-70b5-ddb-a5af.ngrok-free.app/donation/callback'; // Replace with your actual callback URL
+    const callbackUrl = 'https://gogreenapp.vercel.app/dashboard/donation/callback'; // Replace with your actual callback URL
     const encodedCallbackUrl = encodeURIComponent(callbackUrl);
 
     const donationUrl = `https://donate.plant-for-the-planet.org/?to=${projectId}&context=don_&frequency=once&callback_url=${encodedCallbackUrl}&callback_method=api`;
