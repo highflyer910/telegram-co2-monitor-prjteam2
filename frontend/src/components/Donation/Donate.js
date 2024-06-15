@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
-import Loading from '../Loading/Loading'; 
+import Loading from '../Loading/Loading';
 
 const Donate = () => {
-  const [donationSuccessful, setDonationSuccessful] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
@@ -26,18 +24,8 @@ const Donate = () => {
     }
   }, [navigate]);
 
-  useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const context = queryParams.get('context');
-    const status = queryParams.get('don_status');
-
-    if (context && status === 'success') {
-      setDonationSuccessful(true);
-    }
-  }, [location.search]);
-
   if (!user) {
-    return <Loading />; 
+    return <Loading/>;
   }
 
   const handleLogout = () => {
@@ -47,7 +35,7 @@ const Donate = () => {
 
   const handleDonate = () => {
     const projectId = 'mgnus-lucus-it';
-    const callbackUrl = 'https://gogreenapp.vercel.app/dashboard/donation/callback'; // Replace with your actual callback URL
+    const callbackUrl = 'https://gogreenapp.vercel.app/donation/callback'; // Replace with your actual callback URL
     const encodedCallbackUrl = encodeURIComponent(callbackUrl);
 
     const donationUrl = `https://donate.plant-for-the-planet.org/?to=${projectId}&context=don_&frequency=once&callback_url=${encodedCallbackUrl}&callback_method=api`;
@@ -81,14 +69,6 @@ const Donate = () => {
         >
           Donate To Plant Trees
         </button>
-
-        {donationSuccessful && (
-          <div className="text-center text-green-800 p-4 border-2 border-green-800 max-w-screen-sm">
-            <h2>Donation Successful!</h2>
-            <p>Thank you for your donation! Here are the details:</p>
-            {/* to add donation details here */}
-          </div>
-        )}
       </main>
     </div>
   );
