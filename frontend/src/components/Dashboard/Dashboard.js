@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
+import Loading from '../Loading/Loading'; 
+
 
 
 const Dashboard = () => {
@@ -25,7 +27,7 @@ const Dashboard = () => {
   }, [navigate]);
 
   if (!user) {
-    return <p>Loading...</p>; 
+    return <Loading />; 
   }
 
   const handle1MonthButtonClick = () => {

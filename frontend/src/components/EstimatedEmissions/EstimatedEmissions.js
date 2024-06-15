@@ -69,12 +69,6 @@ const EstimatedEmissions = () => {
 
       <div className="flex-grow"></div>
 
-      <button
-        className="bg-green-700 font-body z-10 text-yellow-200 w-full max-w-xs py-3 px-8 rounded shadow-md hover:bg-green-800 mb-8 self-center"
-        aria-label="GoGreen"
-      >
-        GoGreen
-      </button>
     </div>
   );
 };

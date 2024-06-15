@@ -9,7 +9,6 @@ const Header = () => {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    // Check local storage for user authentication
     const storedUser = localStorage.getItem('telegram_user');
     if (storedUser) {
       setUser(JSON.parse(storedUser));

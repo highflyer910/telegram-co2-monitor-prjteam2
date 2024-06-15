@@ -10,8 +10,6 @@ const TelegramAuthCallback = () => {
       id: queryParams.get('id'),
       firstName: queryParams.get('first_name'),
       username: queryParams.get('username'),
-      photo_url: queryParams.get('photo_url'),
-      authDate: queryParams.get('auth_date'),
       hash: queryParams.get('hash'),
     };
 
